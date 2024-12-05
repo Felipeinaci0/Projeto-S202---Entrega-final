@@ -1,3 +1,4 @@
+// db = Database("bolt://44.211.161.134:7687", "neo4j", "threshold-population-divider")
 // Limpa o banco de dados
 MATCH (n) DETACH DELETE n;
 
