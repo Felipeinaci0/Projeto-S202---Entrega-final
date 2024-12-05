@@ -282,7 +282,7 @@ CREATE (p)-[:PLAYS_FOR]->(t);
 MATCH (p:Player {name: "Philippe Coutinho"}), (t:Team {name: "Vasco da Gama"})
 CREATE (p)-[:PLAYS_FOR]->(t);
 
-// Adiciona FanGroups organizadas
+// Adiciona torcidas organizadas
 CREATE (:FanGroup {name: "Raça Rubro-Negra"});
 CREATE (:FanGroup {name: "Gaviões da Fiel"});
 CREATE (:FanGroup {name: "Mancha Verde"});
@@ -291,7 +291,7 @@ CREATE (:FanGroup {name: "Leões da TUF"});
 CREATE (:FanGroup {name: "Galoucura"});
 CREATE (:FanGroup {name: "Máfia Azul"});
 
-// Relaciona FanGroups organizadas aos times
+// Relaciona torcidas organizadas aos times
 MATCH (f:FanGroup {name: "Raça Rubro-Negra"}), (t:Team {name: "Flamengo"})
 CREATE (f)-[:SUPPORTS]->(t);
 MATCH (f:FanGroup {name: "Gaviões da Fiel"}), (t:Team {name: "Corinthians"})
