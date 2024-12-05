@@ -282,27 +282,27 @@ CREATE (p)-[:PLAYS_FOR]->(t);
 MATCH (p:Player {name: "Philippe Coutinho"}), (t:Team {name: "Vasco da Gama"})
 CREATE (p)-[:PLAYS_FOR]->(t);
 
-// Adiciona torcidas organizadas
-CREATE (:Torcida {name: "Raça Rubro-Negra"});
-CREATE (:Torcida {name: "Gaviões da Fiel"});
-CREATE (:Torcida {name: "Mancha Verde"});
-CREATE (:Torcida {name: "Geral do Grêmio"});
-CREATE (:Torcida {name: "Leões da TUF"});
-CREATE (:Torcida {name: "Galoucura"});
-CREATE (:Torcida {name: "Máfia Azul"});
+// Adiciona FanGroups organizadas
+CREATE (:FanGroup {name: "Raça Rubro-Negra"});
+CREATE (:FanGroup {name: "Gaviões da Fiel"});
+CREATE (:FanGroup {name: "Mancha Verde"});
+CREATE (:FanGroup {name: "Geral do Grêmio"});
+CREATE (:FanGroup {name: "Leões da TUF"});
+CREATE (:FanGroup {name: "Galoucura"});
+CREATE (:FanGroup {name: "Máfia Azul"});
 
-// Relaciona torcidas organizadas aos times
-MATCH (f:Torcida {name: "Raça Rubro-Negra"}), (t:Team {name: "Flamengo"})
+// Relaciona FanGroups organizadas aos times
+MATCH (f:FanGroup {name: "Raça Rubro-Negra"}), (t:Team {name: "Flamengo"})
 CREATE (f)-[:SUPPORTS]->(t);
-MATCH (f:Torcida {name: "Gaviões da Fiel"}), (t:Team {name: "Corinthians"})
+MATCH (f:FanGroup {name: "Gaviões da Fiel"}), (t:Team {name: "Corinthians"})
 CREATE (f)-[:SUPPORTS]->(t);
-MATCH (f:Torcida {name: "Mancha Verde"}), (t:Team {name: "Palmeiras"})
+MATCH (f:FanGroup {name: "Mancha Verde"}), (t:Team {name: "Palmeiras"})
 CREATE (f)-[:SUPPORTS]->(t);
-MATCH (f:Torcida {name: "Geral do Grêmio"}), (t:Team {name: "Grêmio"})
+MATCH (f:FanGroup {name: "Geral do Grêmio"}), (t:Team {name: "Grêmio"})
 CREATE (f)-[:SUPPORTS]->(t);
-MATCH (f:Torcida {name: "Leões da TUF"}), (t:Team {name: "Fortaleza"})
+MATCH (f:FanGroup {name: "Leões da TUF"}), (t:Team {name: "Fortaleza"})
 CREATE (f)-[:SUPPORTS]->(t);
-MATCH (f:Torcida {name: "Galoucura"}), (t:Team {name: "Atlético Mineiro"})
+MATCH (f:FanGroup {name: "Galoucura"}), (t:Team {name: "Atlético Mineiro"})
 CREATE (f)-[:SUPPORTS]->(t);
-MATCH (f:Torcida {name: "Máfia Azul"}), (t:Team {name: "Cruzeiro"})
+MATCH (f:FanGroup {name: "Máfia Azul"}), (t:Team {name: "Cruzeiro"})
 CREATE (f)-[:SUPPORTS]->(t);
